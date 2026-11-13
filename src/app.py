@@ -14,5 +14,11 @@ def greet(name):
 	"""Returns a personalized greeting."""
 	return f"Hello, {name}!"
 
+
+@app.route("/nickname/<name>")
+def greet(name):
+	"""Returns a personalized greeting."""
+	return f"I am {name}!"
+
 if __name__ == "__main__":
 	app.run(host="0.0.0.0", port=5000)
