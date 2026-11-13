@@ -16,7 +16,7 @@ def greet(name):
 
 
 @app.route("/nickname/<name>")
-def greet(name):
+def nickname(name):
 	"""Returns a personalized greeting."""
 	return f"I am {name}!"
 

@@ -26,3 +26,12 @@ def test_greet_route():
 	assert response.status_code == 200
 	# Check that the personalized greeting is in the response data
 	assert b'Hello, TestUser!' in response.data
+
+def test_nickname_route():
+	"""Tests the '/nickname/<name>' route with a sample name."""
+	client = app.test_client()
+	# Make a GET request to the dynamic greet route
+	response = client.get('/nickname/TestUser')
+	assert response.status_code == 200
+	# Check that the personalized greeting is in the response data
+	assert b'I am TestUser!' in response.data
